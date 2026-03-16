@@ -1,8 +1,6 @@
 # ShinySuite
 
-A Shiny Pokémon encounter tracker for GBA, DS, and GameCube games. Tracks encounters per route with category filtering, sprite display, encounter counts, and shiny logging.
-
-**Supported games:** Gold/Silver/Crystal, Ruby/Sapphire/Emerald, FireRed/LeafGreen, Diamond/Pearl/Platinum, HeartGold/SoulSilver, Black/White, Black 2/White 2
+A Shiny Pokémon encounter tracker for GBC, GBA, and DS games. Tracks encounters per route with category filtering, sprite display, encounter counts, and shiny logging.
 
 ## Download
 
@@ -35,6 +33,4 @@ Requires [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
 - Encounter counter per Pokémon
 - Shiny log with history dialog
 - OCR-based auto-detection via screen capture
-- Memory reading for HGSS (auto-detects species)
-- Dark theme with accent color customization
 - Mini player pop-out window per route
