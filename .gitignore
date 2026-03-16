@@ -1,0 +1,17 @@
+# Build output
+bin/
+obj/
+publish/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docview
+
+# Rider
+.idea/
+
+# User config (contains local paths/regions)
+shinysuite_config.json

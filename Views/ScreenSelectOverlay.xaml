@@ -1,0 +1,42 @@
+<Window x:Class="ShinySuite.Views.ScreenSelectOverlay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        Cursor="Cross"
+        ShowInTaskbar="False"
+        Focusable="True">
+
+    <Grid>
+        <!-- Transparent dark overlay — captures all mouse events -->
+        <Canvas x:Name="OverlayCanvas" Background="#88000000"
+                MouseDown="Canvas_MouseDown"
+                MouseMove="Canvas_MouseMove"
+                MouseUp="Canvas_MouseUp">
+
+            <!-- Selection rectangle (shown while dragging) -->
+            <Rectangle x:Name="SelectRect"
+                       Stroke="#FFD700" StrokeThickness="2"
+                       Fill="#20FFD700"
+                       Visibility="Collapsed"/>
+
+            <!-- Live coordinate readout near cursor -->
+            <Border x:Name="CoordBorder"
+                    Background="#DD1A1A1A" CornerRadius="4" Padding="8,4"
+                    Visibility="Collapsed">
+                <TextBlock x:Name="CoordText"
+                           Foreground="White" FontFamily="Consolas" FontSize="12"/>
+            </Border>
+        </Canvas>
+
+        <!-- Instruction text (not hit-testable so mouse events pass to canvas) -->
+        <TextBlock x:Name="HintText"
+                   HorizontalAlignment="Center" VerticalAlignment="Top"
+                   Margin="0,60,0,0"
+                   IsHitTestVisible="False"
+                   Foreground="White" FontSize="15" FontWeight="SemiBold"
+                   Text="Click and drag to select a region   ·   Esc to cancel"/>
+    </Grid>
+</Window>

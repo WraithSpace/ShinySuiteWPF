@@ -1,0 +1,53 @@
+<Window x:Class="ShinySuite.Views.ShinyFoundDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shiny Found!" Width="420" Height="270"
+        Background="{StaticResource BgBrush}"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow"
+        ShowInTaskbar="False">
+
+    <StackPanel Margin="24,20,24,20">
+
+        <!-- Title -->
+        <TextBlock Text="✨ Shiny Pokémon Found! ✨"
+                   FontSize="18" FontWeight="Bold"
+                   Foreground="{DynamicResource AccentColor}"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,16"/>
+
+        <!-- Pokémon selector + stats card -->
+        <Border Background="{StaticResource CardBrush}" CornerRadius="8"
+                Padding="14,12" Margin="0,0,0,16">
+            <StackPanel>
+                <TextBlock Text="Which Pokémon was shiny?"
+                           Foreground="{StaticResource SubtleBrush}"
+                           FontSize="11" Margin="0,0,0,6"/>
+                <ComboBox x:Name="PokemonCombo"/>
+                <TextBlock x:Name="StatsBlock"
+                           Foreground="{StaticResource SubtleBrush}"
+                           FontSize="11" Margin="0,10,0,0"
+                           HorizontalAlignment="Center"
+                           TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Cancel"
+                    Style="{StaticResource DarkButton}"
+                    Click="Cancel_Click"
+                    Margin="0,0,8,0"/>
+            <Button Content="Phase"
+                    Style="{StaticResource DarkButton}"
+                    Click="LogContinue_Click"
+                    Margin="0,0,8,0"/>
+            <Button Content="Log &amp; Reset"
+                    Style="{StaticResource GoldButton}"
+                    Click="LogReset_Click"/>
+        </StackPanel>
+
+    </StackPanel>
+
+</Window>
