@@ -1,6 +1,6 @@
 # ShinySuite
 
-A Shiny Pokémon encounter tracker for GBC, GBA, and DS games. Tracks encounters per route with category filtering, sprite display, encounter counts, and shiny logging.
+A Shiny Pokémon encounter tracker. Tracks encounters per route with category filtering, sprite display, encounter counts, and shiny logging.
 
 ## Download
 
